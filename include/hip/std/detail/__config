@@ -123,6 +123,10 @@
 #elif defined(__gfx940__) || defined(__gfx941__) || defined(__gfx942__)
 #define _LIBCUDACXX_HIP_TSC_CLOCKRATE 100000000
 #define _LIBCUDACXX_HIP_TSC_NANOSECONDS_PER_CYCLE 10 // (1/_LIBCUDACXX_HIP_TSC_CLOCKRATE)  
+#elif defined(gfx1100)
+// FIXME(hip): these numbers are just copy-pasted
+#define _LIBCUDACXX_HIP_TSC_CLOCKRATE 100000000
+#define _LIBCUDACXX_HIP_TSC_NANOSECONDS_PER_CYCLE 10 // (1/_LIBCUDACXX_HIP_TSC_CLOCKRATE)  
 #endif
 
 #define _LIBCUDACXX_SYS_CLOCK_DURATION duration<long long, std::ratio<1,_LIBCUDACXX_HIP_TSC_CLOCKRATE>>
